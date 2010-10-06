@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns= "http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
   <head>
-    <title>3ª Semana de Engenharia de Controle e Automação do IFF - {% block title %}{% endblock title %}</title>
+    <title>3ª Semana de Engenharia de Controle e Automação - {% block title %}{% endblock title %}</title>
     <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/style/style.css"/>    
     {% block extra_style %}
     {% endblock extra_style %}
@@ -10,11 +10,7 @@
     <div id="all">
       <div id="left_content">
         <div id="logo">
-        </div>
-        <div id="menu">
-          <ul>
-            <li><a href="/">Home</a></li>
-          </ul>
+          <a href="/"><img src="{{ MEDIA_URL }}/images/logo.jpg"/ alt="3ª Semana de Engenharia de Controle e Automação"/></a>
         </div>
         <div id="content">
           {% block content %}
@@ -23,13 +19,33 @@
       </div>
       <div id="right_content">
         <div id="registration">
+          <a href="">Clique aqui para se cadastrar na 3ª Semana de Engenharia de Controle e Automação.</a>
+        </div>
+        <div id="realization">
+          <span>Realização</span><br>
+          <img src="{{ MEDIA_URL }}/images/iff.jpg"/ alt="IFF"/><br>
+          <img src="{{ MEDIA_URL }}/images/setec.jpg"/ alt="SETEC"/><br>
+          <img src="{{ MEDIA_URL }}/images/mec.jpg"/ alt="MEC"/><br>
+          <img src="{{ MEDIA_URL }}/images/eca.jpg"/ alt="ECA"/><br>
         </div>
         <div id="sponsorship">
+          <span>Patrocínio</span><br>
+          <img src="{{ MEDIA_URL }}/images/bb.jpg"/ alt="Banco do Brasil"/><br>
+          <img src="{{ MEDIA_URL }}/images/ciee.jpg"/ alt="CIEE"/><br>
+          <img src="{{ MEDIA_URL }}/images/schlumberger.jpg"/ alt="Schlumberger"/><br>
         </div>
         <div id="support">
+          <span>Apoio</span><br>
+          <img src="{{ MEDIA_URL }}/images/design.jpg"/ alt="Laboratório Experimental de Design Gráfico"/><br>
         </div>
       </div>
       <div id="footer">
+        <div id="developers">
+          <span>Site desenvolvido por Herman Caldara e Vinícius Chagas</span>
+        </div>
+        <div id="django_powered">
+          <a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangopowered126x54.gif" border="0" alt="Powered by Django." title="Powered by Django." /></a>
+        </div>
       </div>
     </div>
   </body>

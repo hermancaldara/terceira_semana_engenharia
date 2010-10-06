@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #abe1b0;
+}
+
+#all {
+    background-color: #fff;
+    width: 950px;
+    margin: 0px auto 0px auto;
+    border-left: 5px solid #00a650;
+    border-right: 5px solid #00a650;
+}
+
+#left_content {
+    position: relative;
+    float: left;
+    width: 645px;
+    background-color: #fff;
+}
+
+#left_content #logo {
+  border-bottom: 3px dotted #ABE1B0;
+}
+
+#left_content #logo a img {
+    border: none;
+}
+
+#left_content #content {
+}
+
+#right_content {
+    position: relative;
+    float: left;
+    width: 300px;
+    background-color: #fff;
+    text-align: center;
+    border-left: 3px dotted #ABE1B0;
+}
+
+#right_content #registration {
+    background-color: MediumSeaGreen;
+    padding-top: 50px;
+    padding-bottom: 46px;
+    border-bottom: 3px dotted #ABE1B0;
+    width: 302px;
+}
+
+#right_content #registration a:link, #right_content #registration a:visited {
+    color: white;
+    font-weight: bold;
+}
+
+#right_content #realization {
+    margin-top: 20px;
+}
+
+#right_content #realization span {
+    font-size: 30px;
+    color: #ED1C24;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#right_content #realization img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#right_content #sponsorship {
+    margin-top: 20px;
+}
+
+#right_content #sponsorship span {
+    font-size: 30px;
+    color: #ED1C24;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#right_content #sponsorship img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#right_content #support {
+    margin-top: 20px;
+}
+
+#right_content #support span {
+    font-size: 30px;
+    color: #ED1C24;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#right_content #support img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#footer {
+    clear: left;
+    border-top: 3px dotted #ABE1B0;
+    height: 55px;
+    line-height: 50px;
+    background-color: MediumSeaGreen;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-family: verdana;
+}
+
+#footer #developers {
+    float: left;
+}
+
+#footer #django_powered {
+    position: relative;
+    float: right;
+    width: 130px;
+}
