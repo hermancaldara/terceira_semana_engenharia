@@ -27,9 +27,6 @@ body {
     border: none;
 }
 
-#left_content #content {
-}
-
 #right_content {
     position: relative;
     float: left;
@@ -41,15 +38,16 @@ body {
 
 #right_content #registration {
     background-color: MediumSeaGreen;
-    padding-top: 50px;
-    padding-bottom: 46px;
     border-bottom: 3px dotted #ABE1B0;
     width: 302px;
+    height: 156px;
+    line-height: 156px;
 }
 
 #right_content #registration a:link, #right_content #registration a:visited {
     color: white;
     font-weight: bold;
+    font-size: 30px;
 }
 
 #right_content #realization {

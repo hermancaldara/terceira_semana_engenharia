@@ -1,0 +1,23 @@
+#left_content #content {
+    margin: 40px;
+}
+
+#left_content #content p {
+    font-size: 14px;
+}
+
+#left_content #content #programming:link, #left_content #content #programming:visited {
+    color: #ED1C24;
+    text-decoration: none;
+}
+
+#left_content #content #programming p {
+    font-size: 25px;
+}
+
+#left_content #content #news {
+    color: #ED1C24;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
