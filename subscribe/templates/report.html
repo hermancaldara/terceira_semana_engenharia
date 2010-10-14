@@ -1,0 +1,18 @@
+<table>
+    <th>
+        Nome
+    </th>
+    <th>
+        1ª Opç&atilde;o
+    </th>
+    <th>
+        2ª Opç&atilde;o
+    </th>
+    {% for subscribe in all_subscribes %}
+        <tr>
+            <td>{{ subscribe.name }}</td>
+            <td>{{ subscribe.first_short_course }}</td>
+            <td>{{ subscribe.second_short_course }}</td>
+        </tr>
+    {% endfor %}
+</table>

@@ -8,4 +8,5 @@ urlpatterns = patterns('subscribe.views',
     (r'^generate_second_short_course_options/$',
         'generate_second_short_course_options'
     ),
+    (r'^report/$','report'),
 )
