@@ -21,3 +21,14 @@
     font-weight: bold;
     margin-top: 20px;
 }
+
+#championship {
+    font-size: 25px !important; 
+    font-weight: bold;
+}
+
+#site {
+    text-decoration: none;
+    color: #f57215;
+    text-align: center;
+}
