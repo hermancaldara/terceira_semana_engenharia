@@ -1,0 +1,25 @@
+#subscribe_form {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+#first_short_course, #second_short_course {
+    margin-bottom: 20px;
+}
+
+.errorlist {
+    color: #ff0000;
+}
+
+input[type="text"] {
+    width: 350px;
+}
+
+.field {
+    margin-bottom: 5px;
+}
+
+label {
+    width: 300px;
+    text-align: right;
+}

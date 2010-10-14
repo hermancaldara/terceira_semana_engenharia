@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Inscriç&atilde;o{% endblock title %}
+
+{% block extra_style %}
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/style/subscribe.css"/>
+{% endblock extra_style %}
+
+{% block extra_script %}
+<script type="text/javascript" src="{{ MEDIA_URL }}/javascripts/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#id_name').focus();
+        $.post(
+            '/subscribe/generate_first_short_course_options/',
+            {},
+            function(data) {
+                $('#first_short_course').html(data);
+                $("#id_first_short_course").change(function(){
+                    $.post(
+                        '/subscribe/generate_second_short_course_options/',
+                        {'selected_short_course':$(this).val()},
+                        function(data) {
+                           $('#second_short_course').html(data);
+                        }
+                    );
+                });
+            }
+        );
+    });
+</script>
+{% endblock extra_script %}
+
+{% block content %}
+    <div id="subscribe_form">
+        <form method="post" action="">{% csrf_token %}
+            {% for field in subscribe_form %}
+                <div class="field">
+                    <div>{{ field.label_tag }}:</div>
+                    <div>{{ field }}</div>
+                    <div>{{ field.errors }}</div>
+                </div>
+            {% endfor %}
+            <div id="first_short_course"></div>
+            <div id="second_short_course"></div>
+            <input type="submit" value=" Enviar " />
+        </form>
+    </div>
+{% endblock content %}
