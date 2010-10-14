@@ -4,5 +4,20 @@
   Página Inicial
 {% endblock title %}
 
+{% block extra_style %}
+  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL}}/style/index.css"/>
+{% endblock extra_style %}
+
 {% block content %}
+  <p>A Semana de Engenharia de Controle e Automação é um evento que surgiu em 2008, fruto de uma parceria entre os alunos e a coordenação do curso, tornando-se ao longo de sua realização uma importante e esperada data no calendário acadêmico do INSTITUTO FEDERAL FLUMINENSE.</p>
+  <p>O encontro tem sido apoiado pelo IFF CAMPUS Campos-Centro e empresas parceiras. Com o crescimento do evento a cada ano, a ousadia e a inovação serão características importantes, incluindo em sua programação a Mostra Tecnológica com a participação de empresas convidadas.</p>
+  <p>A 3ª Semana de Engenharia apresenta-se no ano de 2010 com o tema “Controle e Automação sem Limites”, reafirmando que o controle e a automação estão presentes nos mais diversos ramos do conhecimento humano, desde a medicina até a exploração espacial.</p>
+  <p>Outro aspecto relevante é a integração com Instituições de Ensino que oferecem cursos de Engenharia, permitindo aos estudantes a oportunidade de reflexão e aprofundamento de temas determinantes para a sua futura inserção no mundo do trabalho.<p>
+  <a href="{{ MEDIA_URL }}/others/programação.pdf" id="programming"><p>* Clique aqui para ver a programação *</p></a>
+  
+  <p id="news">Novidades</p>
+  
+  <p id="championship">Campeonato de Robótica</p>
+  <a id="site" href="http://www.ifftronic.blogspot.com" target="_blank">http://www.ifftronic.blogspot.com</a>
+  
 {% endblock content %}
