@@ -32,16 +32,22 @@ class ShortCourse(models.Model):
 
 class Subscribe(models.Model):
     name = models.CharField(verbose_name="nome", max_length=200)
-    rg = models.CharField(verbose_name="identidade", max_length=12, unique=True)
+    rg = models.CharField(verbose_name="identidade",
+        max_length=12,
+        unique=True,
+        help_text="Digite apenas números."
+    )
     fone = models.CharField(verbose_name="Telefone",
-        max_length=14,
-        help_text="Digite apenas números.")
+        max_length=10,
+        help_text="Digite apenas números."
+    )
     code = models.CharField(verbose_name="Matricula",
         max_length=15,
         unique=True,
         blank=True,
         null=True,
-        help_text="Digite apenas números. Somente para alunos do IFF.")
+        help_text="Digite apenas números. Somente para alunos do IFF."
+    )
     email = models.EmailField(verbose_name="E-mail")
     institution = models.CharField(verbose_name="Instituição", max_length=30)
     first_short_course = models.ForeignKey(

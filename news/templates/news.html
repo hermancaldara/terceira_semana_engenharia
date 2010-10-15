@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+  News
+{% endblock title %}
+
+{% block extra_style %}
+  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL}}/style/news.css"/>
+{% endblock extra_style %}
+
+{% block content %}
+  <p id="news">Novidades</p>
+  
+  {% for news in all_news %}
+    <div id="news_div">    
+      <h3>{{ news.title }}</h3>
+      <p>{{ news.news_date|date:"d/m/Y" }}</p>
+      <p>{{ news.content }}</p>
+    </div>
+  {% endfor %}
+{% endblock content %}

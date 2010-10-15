@@ -1,3 +1,12 @@
+h3 {
+    margin: 2px;
+}
+
+#news_div {
+    margin-left: 30px;
+    border-bottom: 1px dotted #ABE1B0;
+}
+
 #left_content #content {
     margin: 40px;
 }
@@ -25,10 +34,16 @@
 #championship {
     font-size: 25px !important; 
     font-weight: bold;
+    text-align: center;
+    color: #f57215;
 }
 
 #site {
-    text-decoration: none;
-    color: #f57215;
     text-align: center;
+}
+
+#site a{
+    color: #f57215;
+    text-decoration: none;
+    font-size: 16px;
 }

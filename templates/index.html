@@ -17,7 +17,15 @@
   
   <p id="news">Novidades</p>
   
+  {% for news in latest_news %}
+    <div id="news_div">    
+      <h3>{{ news.title }}</h3>
+      <p>{{ news.news_date|date:"d/m/Y" }}</p>
+      <p>{{ news.content }}</p>
+    </div>
+  {% endfor %}
+  <p><a href="/news/">Ver todas</a></p>
   <p id="championship">Campeonato de Robótica</p>
-  <a id="site" href="http://www.ifftronic.blogspot.com" target="_blank">http://www.ifftronic.blogspot.com</a>
+  <p id="site"><a href="http://www.ifftronic.blogspot.com" target="_blank">http://www.ifftronic.blogspot.com</a></p>
   
 {% endblock content %}

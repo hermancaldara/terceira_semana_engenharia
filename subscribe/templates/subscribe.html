@@ -9,7 +9,30 @@
 {% block extra_script %}
 <script type="text/javascript" src="{{ MEDIA_URL }}/javascripts/jquery-1.4.2.js"></script>
 <script type="text/javascript">
+    function mask_upper() {
+        $('#id_name').keyup(function(){
+            $(this).attr('value',$(this).val().toUpperCase());
+        });
+        $('#id_institution').keyup(function(){
+            $(this).attr('value',$(this).val().toUpperCase());
+        });
+    }
+    
+    function mask_number() {
+        $('#id_rg').keyup(function(){
+            $(this).attr('value',$(this).val().replace(/\D/g,""));
+        });
+        $('#id_fone').keyup(function(){
+            $(this).attr('value',$(this).val().replace(/\D/g,""));
+        });
+        $('#id_code').keyup(function(){
+            $(this).attr('value',$(this).val().replace(/\D/g,""));
+        });
+    }
+    
     $(document).ready(function(){
+        mask_upper();
+        mask_number();
         $('#id_name').focus();
         $.post(
             '/subscribe/generate_first_short_course_options/',

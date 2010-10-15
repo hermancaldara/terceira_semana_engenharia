@@ -17,6 +17,7 @@ body {
     float: left;
     width: 645px;
     background-color: #fff;
+    border-right: 3px dotted #ABE1B0;
 }
 
 #left_content #logo {
@@ -33,7 +34,6 @@ body {
     width: 300px;
     background-color: #fff;
     text-align: center;
-    border-left: 3px dotted #ABE1B0;
 }
 
 #right_content #registration {
@@ -112,6 +112,12 @@ body {
 
 #footer #developers {
     float: left;
+    margin-left: 250px;
+}
+
+#footer #developers a {
+    color: #ffffff;
+    font-weight: bold;
 }
 
 #footer #django_powered {

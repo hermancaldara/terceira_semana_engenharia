@@ -85,4 +85,5 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'subscribe',
+	'news',
 )
