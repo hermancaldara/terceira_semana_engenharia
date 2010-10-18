@@ -31,7 +31,7 @@ class ShortCourse(models.Model):
 
 
 class Subscribe(models.Model):
-    name = models.CharField(verbose_name="nome", max_length=200)
+    name = models.CharField(verbose_name="nome completo", max_length=200)
     rg = models.CharField(verbose_name="identidade",
         max_length=12,
         unique=True,
