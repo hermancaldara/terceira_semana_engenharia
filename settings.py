@@ -17,7 +17,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', 
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(PROJECT_ROOT_PATH, 'terceira_semana_engenharia.db'),
         'USER': '',
         'PASSWORD': '',
@@ -73,8 +73,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'terceira_semana_engenharia.urls'
 
 TEMPLATE_DIRS = (
-	os.path.join(PROJECT_ROOT_PATH, 'templates'),
-	os.path.join(PROJECT_ROOT_PATH, 'subscribe/templates'),
+    os.path.join(PROJECT_ROOT_PATH, 'templates'),
+    os.path.join(PROJECT_ROOT_PATH, 'subscribe/templates'),
 )
 
 INSTALLED_APPS = (
@@ -85,5 +85,5 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'subscribe',
-	'news',
+    'news',
 )
