@@ -5,6 +5,9 @@ from django.http import HttpResponse
 from forms import SubscribeForm
 from models import ShortCourse, Subscribe
 
+from utils import get_short_course
+
+
 def subscribe(request):
     subscribe_form = SubscribeForm()
     if request.method == 'POST':
@@ -12,16 +15,12 @@ def subscribe(request):
         if subscribe_form.is_valid():
             subscribe = subscribe_form.save(commit=False)
             try:
-                first_short_course = ShortCourse.objects.get(
-                    id=int(request.POST.get("first_short_course"))
-                )
+                first_short_course = get_short_course(request, "first_short_course")
                 first_short_course.discount_vacancies()
             except:
                 first_short_course = None
             try:
-                second_short_course = ShortCourse.objects.get(
-                    id=int(request.POST.get("second_short_course"))
-                )
+                second_short_course = get_short_course(request, "second_short_course")
                 second_short_course.discount_vacancies()
             except:
                 second_short_course = None
@@ -30,14 +29,15 @@ def subscribe(request):
             subscribe.save()
             return render_to_response(
                 'subscribe_sucessfull.html',
-                context_instance = RequestContext(request)
+                context_instance=RequestContext(request)
             )
     return render_to_response(
         'subscribe.html',
         {'subscribe_form': subscribe_form},
-        context_instance = RequestContext(request)
+        context_instance=RequestContext(request)
     )
-    
+
+
 def generate_first_short_course_options(request):
     all_short_courses = ShortCourse.objects.filter(state='Opened')
     html = ''
@@ -45,13 +45,14 @@ def generate_first_short_course_options(request):
         html += u'1ª opção de minicurso: <select id="id_first_short_course" name="first_short_course">'
         html += '<option selected="selected" value="">---------</option>'
         for short_course in ShortCourse.objects.filter(state='Opened'):
-            html += '<option value="%s">%s</option>' %(
+            html += '<option value="%s">%s</option>' % (
                 short_course.id, short_course.name
             )
         html += '</select>'
-    
+
     return HttpResponse(html)
-    
+
+
 def generate_second_short_course_options(request):
     selected_short_course = request.POST.get('selected_short_course', None)
     second_short_course = []
@@ -64,17 +65,18 @@ def generate_second_short_course_options(request):
         html += u'2ª opção de minicurso: <select id="id_second_short_course" name="second_short_course">'
         html += '<option selected="selected" value="">---------</option>'
         for short_course in second_short_course:
-            html += '<option value="%s">%s</option>' %(
+            html += '<option value="%s">%s</option>' % (
                 short_course.id, short_course.name
             )
         html += '</select>'
-    
+
     return HttpResponse(html)
-    
+
+
 def report(request):
     all_subscribes = Subscribe.objects.all().order_by('name')
     return render_to_response(
         'report.html',
-        {'all_subscribes':all_subscribes},
-        context_instance = RequestContext(request)
+        {'all_subscribes': all_subscribes},
+        context_instance=RequestContext(request)
     )
